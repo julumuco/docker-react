@@ -6,4 +6,4 @@ before_install:
  - docker build -t jldocker954/docker-react -f dockerfile.dev .
 
 script:
- - docker run jldocker954/docker-react npm run test -- --coverage
+ - docker run -e CI=true jldocker954/docker-react npm run test
